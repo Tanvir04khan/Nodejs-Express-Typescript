@@ -1,0 +1,31 @@
+{
+  "name": "Nodejs + Express + Typescrip",
+  "version": "1.0.0",
+  "description": "Nodejs + Express + Typescrip",
+  "main": "dist/index.js",
+  "scripts": {
+    "prestart": "npx kill-port 3000",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"tsup --watch\" \"npm run prestart && nodemon dist/index.js\""
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Typescrip"
+  ],
+  "author": "Nodejs + Express + Typescrip",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
+    "concurrently": "^9.1.0",
+    "kill-port": "^2.0.1",
+    "nodemon": "^3.1.7",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
